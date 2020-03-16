@@ -14,8 +14,26 @@ use Illuminate\Support\Facades\Validator;
 |
 */
 
+/**
+ * Llama al método index de InstrumentoController
+ * 
+ * @var		string	:get(
+ * @global
+ *//**
+ * @var		mixed	@index')
+ * @global
+ */
 Route::get('/', 'InstrumentoController@index');
 
+/**
+ * Recibe el formulario, valida y muestra los errores/envía los datos a la base de datos.
+ * 
+ * @var		string	:post(
+ * @global
+ *//**
+ * @var		request	$reques
+ * @global
+ */
 Route::post('/instrumento', function (Request $request) {
     $validator = Validator::make($request->all(), [
     'nombre' => 'required | max:30',
@@ -46,4 +64,18 @@ Route::post('/instrumento', function (Request $request) {
     return redirect('/');
     });
 
+
+/**
+ * Llama al método deleteInstrumento de InstrumentoController
+ * 
+ * @var		string	:post(
+ * @global
+ *//**
+ * @var		mixed	@deleteInstrumento')
+ * @global
+ */
 Route::post('/instrumento/deleteinstrumento', 'InstrumentoController@deleteInstrumento');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

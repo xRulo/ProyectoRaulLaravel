@@ -1,10 +1,13 @@
 <!--COMPLETA: extiende el layout -->
-@extends('layout.app')
+@extends('layouts.app')
 <!--COMPLETA: empieza la sección -->
 @section('content')
-<div class="panel panel-default">
+<!-- @if (Auth::guest())
+
+        @else -->
+        <div class="panel panel-default">
     <div class="panel-heading">
-        Nueva instrumento
+        Nuevo instrumento
     </div>
 
     <div class="panel-body">
@@ -141,3 +144,5 @@
 	</div>
 <!--COMPLETA: termina la sección -->
 @endsection
+
+        @endif

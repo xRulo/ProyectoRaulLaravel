@@ -13,6 +13,13 @@ class CreateProyectorlTable extends Migration
      */
     public function up()
     {
+        /**
+         * Crea la tabla instrumentosrl con los siguientes campos.
+         * 
+         * @var		mixed	Schem
+         *//**
+         * @var		blueprint	$tabl
+         */
         Schema::create('instrumentosrl', function (Blueprint $table) {
             $table->increments('id');
             $table->string('nombre');

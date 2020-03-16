@@ -10,11 +10,22 @@ use App\Instrumento;
 
 class InstrumentoController extends Controller
 {
+    /**
+     * Recoge todos los datos de instrumentos.
+     *
+     * @return void
+     */
     public function index()
     {
         $instrumentos = Instrumento::all();
         return view('instrumentos', ['instrumentos' => $instrumentos]);
     }
+    /**
+     * Borra la entrada mediante el id proporcionado.
+     *
+     * @param Request $request
+     * @return void
+     */
     public function deleteInstrumento(Request $request){
         $rules = ['id_instrumento' => 'integer'];
         $validator = Validator::make($request->only('id_instrumento'), $rules);
